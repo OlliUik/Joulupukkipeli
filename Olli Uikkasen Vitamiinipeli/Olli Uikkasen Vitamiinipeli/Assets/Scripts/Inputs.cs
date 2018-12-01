@@ -15,7 +15,7 @@ public class Inputs : MonoBehaviour {
 
     // Update is called once per frame
     void Update() {
-        if (Input.GetKeyDown("r") || Input.GetMouseButtonDown(1))
+        if (Input.GetKeyDown("r") )
         {
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex );
             Global.score = 0;
@@ -40,7 +40,7 @@ public class Inputs : MonoBehaviour {
             gameText.text = "";
             presentsText.text = "";
         }
-        if (Input.GetTouch(0).phase == TouchPhase.Began && Global.gameOver || Input.GetMouseButtonDown(1) && Global.gameOver)
+        if ( Input.GetMouseButtonDown(0) && Global.gameOver)
         {
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
             Global.score = 0;

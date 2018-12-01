@@ -25,7 +25,11 @@ public class cameraFollow : MonoBehaviour {
         //{
         //    transform.position = new Vector3(target.transform.position.x, target.transform.position.y, transform.position.z);
         //}
-        cameraPos = new Vector3(Mathf.SmoothStep(transform.position.x, target.transform.position.x, dampTime), Mathf.SmoothStep(transform.position.y, target.transform.position.y, dampTime));
+        if(target != null)
+        {
+            cameraPos = new Vector3(Mathf.SmoothStep(transform.position.x, target.transform.position.x, dampTime), Mathf.SmoothStep(transform.position.y, target.transform.position.y, dampTime));
+        }
+       
         //if (target)
         //{
         //    float targetX = target.position.x + xOffset;

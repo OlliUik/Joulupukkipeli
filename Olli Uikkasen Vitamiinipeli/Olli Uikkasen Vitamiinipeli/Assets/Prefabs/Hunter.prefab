@@ -613,7 +613,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 1
   bullet: {fileID: 1165971183378222}
-  life: 7
+  life: 30
   startAngle: 0
   hasDrag: 0
   drag: 0.1
@@ -635,7 +635,7 @@ MonoBehaviour:
   debris2: {fileID: 1776869318090400, guid: 8b028f554a8e7f249bf43f267b6569b6, type: 2}
   debris3: {fileID: 1776869318090400, guid: ffce989d31fbc4947941e2b039ec819d, type: 2}
   rotSpeed: 3.7
-  life: 10
+  life: 30
   turret: {fileID: 1165971183378222}
   cam: {fileID: 0}
   move: {fileID: 114471504501588536}

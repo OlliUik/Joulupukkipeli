@@ -649,7 +649,7 @@ MonoBehaviour:
   debris2: {fileID: 1776869318090400, guid: fd7204b0bcff5c346870dbe05fdf5ef7, type: 2}
   debris3: {fileID: 1776869318090400, guid: a08f20d9fa047344bb7c582c2eb86b00, type: 2}
   rotSpeed: 4
-  life: 10
+  life: 30
   turret: {fileID: 1165971183378222}
   cam: {fileID: 20210893782701888, guid: 37f6d8f258ed35b478118b92d526c2e6, type: 2}
 --- !u!114 &114471504501588536
@@ -665,7 +665,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 1
   bullet: {fileID: 1165971183378222}
-  life: 7
+  life: 30
   startAngle: 0
   hasDrag: 0
   drag: 0
@@ -683,7 +683,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bullet: {fileID: 1879626443921024, guid: b0604aa2fcbdb6c45a87e02c4747727b, type: 2}
-  firerate: 0.8
+  firerate: 1
   shootTimer: 0
   bulletSpawn: {fileID: 4556091459704090}
 --- !u!212 &212056558167732476

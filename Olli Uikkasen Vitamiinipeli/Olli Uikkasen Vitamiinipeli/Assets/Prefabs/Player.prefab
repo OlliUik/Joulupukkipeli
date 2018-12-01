@@ -311,13 +311,19 @@ MonoBehaviour:
   rotAcc: 10
   acc: 0.5
   Drag: 0.4
-  maxSpeed: 18
+  maxSpeed: 16
   maxRotSpeed: 40
   margin: 360
   bounce: 0.07
   bouncing: 0
   bounceTime: 0.4
   bounceTimer: 0
+  dClickTimer: 0
+  dClickThreshold: 0.5
+  teleportCD: 0
+  teleportTime: 0
+  canTeleport: 1
+  anim: {fileID: 0}
 --- !u!212 &212722367196263174
 SpriteRenderer:
   m_ObjectHideFlags: 1

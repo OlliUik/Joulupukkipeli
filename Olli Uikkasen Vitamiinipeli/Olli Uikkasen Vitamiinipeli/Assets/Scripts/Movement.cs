@@ -17,14 +17,42 @@ public class Movement : MonoBehaviour {
     private bool timerSet;
     public float bounceTime;
     public float bounceTimer;
+    public float dClickTimer;
+    public float dClickThreshold;
     private Vector2 direction;
+    public float teleportCD;
+    public float teleportTime;
+    public bool canTeleport = true;
+    public Animator anim;
 	// Use this for initialization
 	void Start () {
-		
+        
 	}
-	
-	// Update is called once per frame
-	void FixedUpdate () {
+
+    // Update is called once per frame
+    private void Update()
+    {
+        if (Input.GetMouseButtonDown(0))
+        {
+            if(Time.time > dClickTimer)
+            {
+                dClickTimer = Time.time + dClickThreshold;
+            }
+            else if ( Time.time < dClickTimer && canTeleport)
+            {
+                Debug.Log("Teleport!");
+                Teleport();
+            }
+
+        }
+        if (Time.time > teleportTime)
+        {
+            canTeleport = true;
+            anim.SetBool("canTeleport", canTeleport);
+        }
+
+    }
+    void FixedUpdate () {
         if (bouncing)
         {
             Bounce();
@@ -32,9 +60,11 @@ public class Movement : MonoBehaviour {
         }
         else if (Input.GetMouseButton(0) || Input.touchCount > 0)
         {
+            
             lookAtMouse();
             moveCharacter();
         }
+       
 
         else
         {
@@ -52,6 +82,13 @@ public class Movement : MonoBehaviour {
         }
         
 	}
+    void Teleport()
+    {
+        transform.position = new Vector3 (Camera.main.ScreenToWorldPoint(Input.mousePosition).x, Camera.main.ScreenToWorldPoint(Input.mousePosition).y, 0);
+        teleportTime = Time.time + teleportCD;
+        canTeleport = false;
+        anim.SetBool("canTeleport", canTeleport);
+    }
     void Bounce()
     {
         if (!timerSet)
