@@ -58,7 +58,7 @@ public class Movement : MonoBehaviour {
             Bounce();
             lookAtMouse();
         }
-        else if (Input.GetMouseButton(0) || Input.touchCount > 0)
+        else if (Input.GetMouseButton(0) )
         {
             
             lookAtMouse();
@@ -109,16 +109,10 @@ public class Movement : MonoBehaviour {
         }
             
     }
-    void lookAtMouse()
-    {
-        if (Input.GetMouseButton(0))
-        {
-           direction = Camera.main.ScreenToWorldPoint(Input.mousePosition) - transform.position;
-        }
-        else
-        {
-           direction = Camera.main.ScreenToWorldPoint(Input.GetTouch(0).position) - transform.position;
-        }
+    void lookAtMouse() { 
+
+        direction = Camera.main.ScreenToWorldPoint(Input.mousePosition) - transform.position;
+
         float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
         Quaternion rotation = Quaternion.AngleAxis(angle, Vector3.forward);
         if (rotSpeed < maxRotSpeed)

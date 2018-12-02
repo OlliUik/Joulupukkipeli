@@ -81,12 +81,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 81062f84bbde2c34c89fc3f07d9ac95f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 5
+  speed: 3
   bullet: {fileID: 1879626443921024}
   life: 5
   startAngle: 0
   hasDrag: 1
-  drag: -1
+  drag: -0.5
   maxSpeed: 8
   hasMaxSpeed: 1
 --- !u!212 &212545849026292730

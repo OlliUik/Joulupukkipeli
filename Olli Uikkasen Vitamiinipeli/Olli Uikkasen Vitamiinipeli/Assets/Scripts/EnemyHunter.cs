@@ -83,16 +83,8 @@ public class EnemyHunter : MonoBehaviour {
     {
         if (collision.gameObject.tag == "Hitter" && !dying || collision.gameObject.tag == "Debris" && !dying)
         {
-            dying = true;
-            Global.score += 1 * Global.multiplier;
-            Global.multiplier += 1;
-            Global.timer = Time.time + Global.timeLimit;
-            Instantiate(debris, this.transform.position, collision.transform.rotation);
-            Instantiate(debris2, this.transform.position, collision.transform.rotation);
-            Instantiate(debris3, this.transform.position, collision.transform.rotation);
             ScreenShake shake = cam.GetComponent<ScreenShake>();
-            
-            if(collision.gameObject.tag == "Hitter")
+            if (collision.gameObject.tag == "Hitter")
             {
                 Movement move = collision.GetComponentInParent<Movement>();
                 Debug.Log(move.bouncing);
@@ -103,6 +95,16 @@ public class EnemyHunter : MonoBehaviour {
             {
                 shake.shake = 0.2f;
             }
+            dying = true;
+            Global.score += 1 * Global.multiplier;
+            Global.multiplier += 1;
+            Global.timer = Time.time + Global.timeLimit;
+            Instantiate(debris, this.transform.position, collision.transform.rotation);
+            Instantiate(debris2, this.transform.position, collision.transform.rotation);
+            Instantiate(debris3, this.transform.position, collision.transform.rotation);
+            
+            
+           
 
             Debug.Log("Kill!");
             Destroy(this.gameObject);

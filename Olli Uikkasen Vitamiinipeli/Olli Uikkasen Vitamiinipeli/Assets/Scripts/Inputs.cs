@@ -40,7 +40,7 @@ public class Inputs : MonoBehaviour {
             gameText.text = "";
             presentsText.text = "";
         }
-        if ( Input.GetMouseButtonDown(0) && Global.gameOver)
+        if ( Input.GetMouseButtonDown(0) && Global.gameOver || Input.GetMouseButtonDown(1) && Global.gameOver)
         {
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
             Global.score = 0;

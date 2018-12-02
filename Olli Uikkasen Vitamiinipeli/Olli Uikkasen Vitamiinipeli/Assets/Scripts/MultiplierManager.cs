@@ -11,7 +11,7 @@ public class MultiplierManager : MonoBehaviour {
     public Text gameOverText;
     public Text resetText;
     public Text quitText;
-
+    
 
     // Use this for initialization
     void Start () {
@@ -20,6 +20,7 @@ public class MultiplierManager : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+       
         multText.text = "x" + Global.multiplier.ToString();
         scoreText.text = Global.score.ToString();
         multTimer = Global.timer;
