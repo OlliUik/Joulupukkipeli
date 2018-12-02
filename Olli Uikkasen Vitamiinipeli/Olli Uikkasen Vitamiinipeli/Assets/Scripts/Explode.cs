@@ -27,9 +27,10 @@ public class Explode : MonoBehaviour {
             if (collision.gameObject.tag == "Hitter" && !dying || collision.gameObject.tag == "Debris" && !dying)
             {
                 dying = true;
-                Global.sleep = true;
+                
                 if (collision.gameObject.tag == "Hitter")
                 {
+                    Global.sleep = true;
                     Debug.Log("Bounce");
                     Movement move = collision.GetComponentInParent<Movement>();
                     Debug.Log(move.bouncing);

@@ -9,6 +9,7 @@ TagManager:
   - 225
   - Debris
   - Destroyer
+  - FlankArea
   layers:
   - Default
   - TransparentFX

@@ -52,8 +52,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   turret: {fileID: 1165971183378222, guid: 4007bb47ee7f29d438441d32f4d64824, type: 2}
-  hunter: {fileID: 1165971183378222, guid: 6b953bdd9a8ca2d40915d2cdc4429a87, type: 2}
+  hunter: {fileID: 1971468819595116, guid: a559e274fe999fe418edc211b02585ac, type: 2}
   spawnrate: 1.8
   spawnTimer: 0
   spawner: {fileID: 4145821361655270}
   waveLength: 5
+  reliableSpawner: 0
