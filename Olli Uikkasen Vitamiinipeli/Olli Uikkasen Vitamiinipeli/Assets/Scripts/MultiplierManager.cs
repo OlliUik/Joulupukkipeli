@@ -20,23 +20,26 @@ public class MultiplierManager : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-       
-        multText.text = "x" + Global.multiplier.ToString();
-        scoreText.text = Global.score.ToString();
-        multTimer = Global.timer;
-        if (Global.gameOver)
+        if (!Global.gamePaused)
         {
-            Debug.Log("Game Over!");
-            gameOverText.text = Global.score.ToString();
-            //resetText.text = "Touch to Reset";
-            //resetText.text = "R - Reset";
-            //quitText.text = "Q - Quit";
+            multText.text = "x" + Global.multiplier.ToString();
+            scoreText.text = Global.score.ToString();
+            multTimer = Global.timer;
+            if (Global.gameOver)
+            {
+                Debug.Log("Game Over!");
+                gameOverText.text = Global.score.ToString();
+                //resetText.text = "Touch to Reset";
+                //resetText.text = "R - Reset";
+                //quitText.text = "Q - Quit";
+            }
+            if (Time.time > multTimer)
+            {
+                multTimer = Time.time + Global.timeLimit;
+                Global.multiplier = 1;
+            }
         }
-        if (Time.time > multTimer)
-        {
-            multTimer = Time.time + Global.timeLimit;
-            Global.multiplier = 1;
-        }
+           
 
     }
 }

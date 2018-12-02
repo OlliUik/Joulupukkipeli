@@ -14,15 +14,19 @@ public class ScreenShake : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		if (shake > 0)
+        if (!Global.gamePaused)
         {
-            Debug.Log("Literally shaking!");
-            cam.transform.localPosition = Random.insideUnitSphere * shakeAmount;
-            shake -= Time.deltaTime * decreaseFactor;
+            if (shake > 0)
+            {
+                Debug.Log("Literally shaking!");
+                cam.transform.localPosition = Random.insideUnitSphere * shakeAmount;
+                shake -= Time.deltaTime * decreaseFactor;
+            }
+            else
+            {
+                shake = 0;
+            }
         }
-        else
-        {
-            shake = 0;
-        }
+
 	}
 }

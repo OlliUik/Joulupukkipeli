@@ -9,5 +9,7 @@ public class Global : MonoBehaviour {
     public static float timeLimit= 2.5f;
     public static bool gameOver = false;
     public static bool gameStarted = false;
+    public static bool gamePaused = false;
+    public static bool sleep;
 
 }

@@ -16,17 +16,21 @@ public class KillPlayer : MonoBehaviour {
 	}
     void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.tag == "Player")
+        if (!Global.gamePaused)
         {
-            //finalScore.text = Global.score.ToString();
-            Global.gameOver = true;
-            Debug.Log("Hit!");
-            Destroy(collision.gameObject);
-            if (bullet)
+            if (collision.gameObject.tag == "Player")
             {
-                Destroy(this.gameObject);
-            }
+                //finalScore.text = Global.score.ToString();
+                Global.gameOver = true;
+                Debug.Log("Hit!");
+                Destroy(collision.gameObject);
+                if (bullet)
+                {
+                    Destroy(this.gameObject);
+                }
 
+            }
         }
+
     }
 }

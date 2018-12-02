@@ -105,6 +105,7 @@ GameObject:
   - component: {fileID: 58492381596706664}
   - component: {fileID: 95920735430306906}
   - component: {fileID: 114471504501588536}
+  - component: {fileID: 114854740684404612}
   m_Layer: 0
   m_Name: Hunter
   m_TagString: Untagged
@@ -631,13 +632,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 0}
-  debris: {fileID: 1776869318090400, guid: e019248407ea14548b6851bc1fcb04b1, type: 2}
-  debris2: {fileID: 1776869318090400, guid: 8b028f554a8e7f249bf43f267b6569b6, type: 2}
-  debris3: {fileID: 1776869318090400, guid: ffce989d31fbc4947941e2b039ec819d, type: 2}
   rotSpeed: 3.7
   life: 30
   turret: {fileID: 1165971183378222}
-  cam: {fileID: 0}
   move: {fileID: 114471504501588536}
   attacking: 0
   attackSpeed: 15
@@ -658,6 +655,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bullet: 0
+--- !u!114 &114854740684404612
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1165971183378222}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aad24f28cc649cc409ab0e98f4be665a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  debris: {fileID: 1776869318090400, guid: e019248407ea14548b6851bc1fcb04b1, type: 2}
+  debris2: {fileID: 1776869318090400, guid: 8b028f554a8e7f249bf43f267b6569b6, type: 2}
+  debris3: {fileID: 1776869318090400, guid: ffce989d31fbc4947941e2b039ec819d, type: 2}
+  cam: {fileID: 0}
 --- !u!212 &212056558167732476
 SpriteRenderer:
   m_ObjectHideFlags: 1

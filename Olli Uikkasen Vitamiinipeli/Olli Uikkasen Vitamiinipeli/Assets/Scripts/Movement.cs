@@ -32,54 +32,62 @@ public class Movement : MonoBehaviour {
     // Update is called once per frame
     private void Update()
     {
-        if (Input.GetMouseButtonDown(0))
+        if (!Global.gamePaused)
         {
-            if(Time.time > dClickTimer)
+            if (Input.GetMouseButtonDown(0))
             {
-                dClickTimer = Time.time + dClickThreshold;
-            }
-            else if ( Time.time < dClickTimer && canTeleport)
-            {
-                Debug.Log("Teleport!");
-                Teleport();
-            }
+                if (Time.time > dClickTimer)
+                {
+                    dClickTimer = Time.time + dClickThreshold;
+                }
+                else if (Time.time < dClickTimer && canTeleport)
+                {
+                    Debug.Log("Teleport!");
+                    Teleport();
+                }
 
+            }
+            if (Time.time > teleportTime)
+            {
+                canTeleport = true;
+                anim.SetBool("canTeleport", canTeleport);
+            }
         }
-        if (Time.time > teleportTime)
-        {
-            canTeleport = true;
-            anim.SetBool("canTeleport", canTeleport);
-        }
+        
 
     }
     void FixedUpdate () {
-        if (bouncing)
+        if (!Global.gamePaused)
         {
-            Bounce();
-            lookAtMouse();
-        }
-        else if (Input.GetMouseButton(0) )
-        {
-            
-            lookAtMouse();
-            moveCharacter();
-        }
-       
+            if (bouncing)
+            {
+                Bounce();
+                lookAtMouse();
+            }
+            else if (Input.GetMouseButton(0))
+            {
 
-        else
-        {
-            rotSpeed = 0;
-            if (speed > 0)
-            {
-                speed -= Drag;
-                transform.position += transform.right * Time.deltaTime * speed;
+                lookAtMouse();
+                moveCharacter();
             }
-            else if (speed < 0)
+
+
+            else
             {
-                speed = 0;
-                transform.position += transform.right * Time.deltaTime * speed;
+                rotSpeed = 0;
+                if (speed > 0)
+                {
+                    speed -= Drag;
+                    transform.position += transform.right * Time.deltaTime * speed;
+                }
+                else if (speed < 0)
+                {
+                    speed = 0;
+                    transform.position += transform.right * Time.deltaTime * speed;
+                }
             }
         }
+            
         
 	}
     void Teleport()

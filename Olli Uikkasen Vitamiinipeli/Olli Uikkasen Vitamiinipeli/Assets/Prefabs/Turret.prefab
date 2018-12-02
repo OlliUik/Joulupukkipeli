@@ -120,6 +120,7 @@ GameObject:
   - component: {fileID: 58492381596706664}
   - component: {fileID: 95920735430306906}
   - component: {fileID: 114209940906487200}
+  - component: {fileID: 114151112685654888}
   m_Layer: 0
   m_Name: Turret
   m_TagString: Untagged
@@ -633,6 +634,21 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &114151112685654888
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1165971183378222}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aad24f28cc649cc409ab0e98f4be665a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  debris: {fileID: 1776869318090400, guid: 594abdd06b149da4497c748774f23a4b, type: 2}
+  debris2: {fileID: 1776869318090400, guid: fd7204b0bcff5c346870dbe05fdf5ef7, type: 2}
+  debris3: {fileID: 1776869318090400, guid: a08f20d9fa047344bb7c582c2eb86b00, type: 2}
+  cam: {fileID: 0}
 --- !u!114 &114209940906487200
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -664,13 +680,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 0}
-  debris: {fileID: 1776869318090400, guid: 594abdd06b149da4497c748774f23a4b, type: 2}
-  debris2: {fileID: 1776869318090400, guid: fd7204b0bcff5c346870dbe05fdf5ef7, type: 2}
-  debris3: {fileID: 1776869318090400, guid: a08f20d9fa047344bb7c582c2eb86b00, type: 2}
   rotSpeed: 4
   life: 30
   turret: {fileID: 1165971183378222}
-  cam: {fileID: 20210893782701888, guid: 37f6d8f258ed35b478118b92d526c2e6, type: 2}
 --- !u!114 &114670359382570532
 MonoBehaviour:
   m_ObjectHideFlags: 1

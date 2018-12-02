@@ -25,7 +25,7 @@ public class cameraFollow : MonoBehaviour {
         //{
         //    transform.position = new Vector3(target.transform.position.x, target.transform.position.y, transform.position.z);
         //}
-        if(target != null)
+        if(target != null && !Global.gamePaused)
         {
             cameraPos = new Vector3(Mathf.SmoothStep(transform.position.x, target.transform.position.x, dampTime), Mathf.SmoothStep(transform.position.y, target.transform.position.y, dampTime));
         }
@@ -64,6 +64,10 @@ public class cameraFollow : MonoBehaviour {
     }
     void LateUpdate()
     {
-        transform.position = cameraPos + Vector3.forward * -10;
+        if (!Global.gamePaused)
+        {
+            transform.position = cameraPos + Vector3.forward * -10;
+        }
+            
     }
 }

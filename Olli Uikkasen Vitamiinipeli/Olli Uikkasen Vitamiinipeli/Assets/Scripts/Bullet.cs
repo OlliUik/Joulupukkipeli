@@ -21,20 +21,24 @@ public class Bullet : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        transform.position += transform.right * Time.deltaTime * speed;
-        
-        if (hasDrag)
+        if (!Global.gamePaused)
         {
-            if(speed < maxSpeed || !hasMaxSpeed)
+            transform.position += transform.right * Time.deltaTime * speed;
+
+            if (hasDrag)
             {
-                speed -= drag;
+                if (speed < maxSpeed || !hasMaxSpeed)
+                {
+                    speed -= drag;
+                }
+                else
+                {
+                    speed = maxSpeed;
+                }
+
             }
-            else
-            {
-                speed = maxSpeed;
-            }
-            
         }
+
     }
 
 }
