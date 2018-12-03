@@ -32,7 +32,7 @@ public class EnemyFlanke : MonoBehaviour {
     }
 
     // Update is called once per frame
-    void FixedUpdate()
+    void Update()
     {
 
         if (!Global.gamePaused)
