@@ -7,57 +7,42 @@ public class Explode : MonoBehaviour {
     public GameObject debris2;
     public GameObject debris3;
     private bool dying;
+    public bool instantiated;
     private ScreenShake shake;
     public Camera cam;
+    public Quaternion rot;
     // Use this for initialization
     void Start () {
         cam = Camera.main;
         shake = cam.GetComponent<ScreenShake>();
         
     }
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
-    private void OnTriggerEnter2D(Collider2D collision)
+    private void Update()
     {
-        if (!Global.gamePaused)
+        if (instantiated && !dying)
         {
-            if (collision.gameObject.tag == "Hitter" && !dying || collision.gameObject.tag == "Debris" && !dying)
-            {
-                dying = true;
-                
-                if (collision.gameObject.tag == "Hitter")
-                {
-                    Global.sleep = true;
-                    Debug.Log("Bounce");
-                    Movement move = collision.GetComponentInParent<Movement>();
-                    Debug.Log(move.bouncing);
-                    move.bouncing = true;
-                    shake.shake = 0.3f;
-                }
-                else
-                {
-                    shake.shake = 0.2f;
-                }
-
-                Global.score += 1 * Global.multiplier;
-                Global.multiplier += 1;
-                Global.timer = Time.time + Global.timeLimit;
-                Debug.Log(Global.score);
-                Instantiate(debris, this.transform.position, collision.transform.rotation);
-                Instantiate(debris2, this.transform.position, collision.transform.rotation);
-                Instantiate(debris3, this.transform.position, collision.transform.rotation);
+            dying = true;
 
 
 
 
-                Debug.Log("Kill!");
-                Destroy(this.gameObject);
-            }
+            Global.score += 1 * Global.multiplier;
+            Global.multiplier += 1;
+            Global.timer = Time.time + Global.timeLimit;
+            Debug.Log(Global.score);
+            Instantiate(debris, this.transform.position, rot);
+            Instantiate(debris2, this.transform.position, rot);
+            Instantiate(debris3, this.transform.position, this.transform.rotation);
+
+
+            Debug.Log("Kill!");
+            dying = false;
+            instantiated = false;
+            gameObject.SetActive(false);
         }
-           
     }
+
+ 
+
 
 }

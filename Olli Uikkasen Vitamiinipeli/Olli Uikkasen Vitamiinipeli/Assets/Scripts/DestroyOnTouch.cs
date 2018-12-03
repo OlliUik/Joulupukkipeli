@@ -17,7 +17,7 @@ public class DestroyOnTouch : MonoBehaviour {
     {
         if (!Global.gamePaused)
         {
-            Destroy(collision.gameObject);
+            collision.gameObject.SetActive(false);
         }
             
     }
@@ -25,7 +25,7 @@ public class DestroyOnTouch : MonoBehaviour {
     {
         if (!Global.gamePaused)
         {
-            Destroy(collision.gameObject);
+            collision.gameObject.SetActive(false);
         }
     }
 }

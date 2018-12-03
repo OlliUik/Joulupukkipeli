@@ -23,7 +23,7 @@ GameObject:
   - component: {fileID: 114582529335661346}
   - component: {fileID: 114204598402807688}
   - component: {fileID: 58264133270866754}
-  - component: {fileID: 114601435341499618}
+  - component: {fileID: 114904815949131616}
   m_Layer: 0
   m_Name: Projectile 3
   m_TagString: Untagged
@@ -39,7 +39,7 @@ Transform:
   m_GameObject: {fileID: 1879626443921024}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -2.3020368, y: -2.2974825, z: 0}
-  m_LocalScale: {x: 0.05, y: 0.05, z: 0.1}
+  m_LocalScale: {x: 0.1, y: 0.1, z: 0.1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -58,7 +58,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 3.9699414
+  m_Radius: 2.4098675
 --- !u!114 &114204598402807688
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -89,7 +89,7 @@ MonoBehaviour:
   drag: -0.5
   maxSpeed: 8
   hasMaxSpeed: 1
---- !u!114 &114601435341499618
+--- !u!114 &114904815949131616
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -97,11 +97,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1879626443921024}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 37fac21d1f093d344816942d1abce94e, type: 3}
+  m_Script: {fileID: 11500000, guid: d73fc4dbdd285de49a1c25a876d393e0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_TimeOut: 5
-  m_DetachChildren: 0
+  lifeSpan: 0
 --- !u!212 &212545849026292730
 SpriteRenderer:
   m_ObjectHideFlags: 1

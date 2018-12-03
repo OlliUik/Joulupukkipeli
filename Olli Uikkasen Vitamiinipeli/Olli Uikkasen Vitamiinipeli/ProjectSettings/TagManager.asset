@@ -11,6 +11,8 @@ TagManager:
   - Destroyer
   - FlankArea
   - Flanker
+  - Turret
+  - Hunter
   layers:
   - Default
   - TransparentFX

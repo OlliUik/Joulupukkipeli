@@ -23,6 +23,12 @@ public class Shoot : MonoBehaviour {
     void shoot()
     {
         shootTimer = Time.time + firerate;
-        Instantiate(bullet, bulletSpawn.position, bulletSpawn.rotation);
+        GameObject obj = StaticPooler.current.GetPooledObject();
+  
+        if (obj == null) return;
+
+        obj.transform.position = transform.position;
+        obj.transform.rotation = transform.rotation;
+        obj.SetActive(true);
     }
 }

@@ -298,7 +298,7 @@ GameObject:
   - component: {fileID: 95288522290600220}
   - component: {fileID: 114148630098363522}
   - component: {fileID: 114592981169867752}
-  - component: {fileID: 114705187257404090}
+  - component: {fileID: 114560175371632932}
   m_Layer: 0
   m_Name: ButtHugger
   m_TagString: Flanker
@@ -683,8 +683,6 @@ MonoBehaviour:
   regSpeed: 10
   sprintTimer: 0
   sprintTime: 2
-  sprintCoolDown: 0
-  sprintCoolDownTimer: 0
   flankDist: 10
 --- !u!114 &114148630098363522
 MonoBehaviour:
@@ -719,6 +717,18 @@ MonoBehaviour:
   firerate: 1
   shootTimer: 0
   bulletSpawn: {fileID: 4349682814125864}
+--- !u!114 &114560175371632932
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1971468819595116}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d73fc4dbdd285de49a1c25a876d393e0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lifeSpan: 30
 --- !u!114 &114560504905600920
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -747,7 +757,9 @@ MonoBehaviour:
   debris: {fileID: 1776869318090400, guid: 594abdd06b149da4497c748774f23a4b, type: 2}
   debris2: {fileID: 1776869318090400, guid: fd7204b0bcff5c346870dbe05fdf5ef7, type: 2}
   debris3: {fileID: 1776869318090400, guid: a08f20d9fa047344bb7c582c2eb86b00, type: 2}
+  instantiated: 0
   cam: {fileID: 0}
+  rot: {x: 0, y: 0, z: 0, w: 0}
 --- !u!114 &114671941834770136
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -760,19 +772,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bullet: 0
---- !u!114 &114705187257404090
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1971468819595116}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 37fac21d1f093d344816942d1abce94e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_TimeOut: 30
-  m_DetachChildren: 0
 --- !u!212 &212045913874420988
 SpriteRenderer:
   m_ObjectHideFlags: 1

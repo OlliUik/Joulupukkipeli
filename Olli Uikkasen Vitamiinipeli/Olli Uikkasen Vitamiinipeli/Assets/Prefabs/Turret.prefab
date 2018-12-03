@@ -121,10 +121,10 @@ GameObject:
   - component: {fileID: 95920735430306906}
   - component: {fileID: 114209940906487200}
   - component: {fileID: 114151112685654888}
-  - component: {fileID: 114159157784857072}
+  - component: {fileID: 114424608759328036}
   m_Layer: 0
   m_Name: Turret
-  m_TagString: Untagged
+  m_TagString: Turret
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -649,20 +649,9 @@ MonoBehaviour:
   debris: {fileID: 1776869318090400, guid: 594abdd06b149da4497c748774f23a4b, type: 2}
   debris2: {fileID: 1776869318090400, guid: fd7204b0bcff5c346870dbe05fdf5ef7, type: 2}
   debris3: {fileID: 1776869318090400, guid: a08f20d9fa047344bb7c582c2eb86b00, type: 2}
+  instantiated: 0
   cam: {fileID: 0}
---- !u!114 &114159157784857072
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1165971183378222}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 37fac21d1f093d344816942d1abce94e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_TimeOut: 30
-  m_DetachChildren: 0
+  rot: {x: 0, y: 0, z: 0, w: 0}
 --- !u!114 &114209940906487200
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -695,6 +684,18 @@ MonoBehaviour:
   target: {fileID: 0}
   rotSpeed: 4
   life: 30
+--- !u!114 &114424608759328036
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1165971183378222}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d73fc4dbdd285de49a1c25a876d393e0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lifeSpan: 0
 --- !u!114 &114670359382570532
 MonoBehaviour:
   m_ObjectHideFlags: 1

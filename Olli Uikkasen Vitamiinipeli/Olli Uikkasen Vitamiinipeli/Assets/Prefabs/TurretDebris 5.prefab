@@ -41,6 +41,7 @@ GameObject:
   - component: {fileID: 50642250981040740}
   - component: {fileID: 61902307620187622}
   - component: {fileID: 114210116405481020}
+  - component: {fileID: 114456701484262972}
   m_Layer: 0
   m_Name: TurretDebris 5
   m_TagString: Debris
@@ -151,6 +152,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_TimeOut: 0.8
   m_DetachChildren: 0
+--- !u!114 &114456701484262972
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1776869318090400}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b0a0529f3882ee34bbbb831169226460, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isPlayer: 0
+  shakeAmount: 0.2
 --- !u!114 &114834917394941306
 MonoBehaviour:
   m_ObjectHideFlags: 1

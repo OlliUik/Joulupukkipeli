@@ -3,19 +3,20 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Spawner : MonoBehaviour {
-    public GameObject turret;
-    public GameObject hunter;
+
     public float spawnrate;
     public float spawnTimer;
     public Transform spawner;
     private int spawnCount;
     public int waveLength;
     public bool reliableSpawner;
+    public Pooler pooler;
+   
   
     // Use this for initialization
     void Start()
     {
-        spawnTimer = 0;
+   
     }
 
     // Update is called once per frame
@@ -41,14 +42,7 @@ public class Spawner : MonoBehaviour {
 
         if (Random.value < 0.5f)
         {
-            if (Random.value < 0.5f)
-            {
-                Instantiate(turret, spawner.position, spawner.rotation);
-            }
-            else
-            {
-                Instantiate(hunter, spawner.position, spawner.rotation);
-            }
+            Spawn();
 
         }
     }
@@ -59,65 +53,42 @@ public class Spawner : MonoBehaviour {
         spawnCount += 1;
        if(Random.value < 0.33f && spawnCount >= waveLength)
         {
-            if (Random.value < 0.5f)
-            {
-                Instantiate(turret, spawner.position, spawner.rotation);
-            }
-            else
-            {
-                Instantiate(hunter, spawner.position, spawner.rotation);
-            }
-                
+            Spawn();
+
         }
         else if (Random.value < 0.33f && spawnCount >= waveLength *2)
         {
-            if (Random.value < 0.5f)
-            {
-                Instantiate(turret, spawner.position, spawner.rotation);
-            }
-            else
-            {
-                Instantiate(hunter, spawner.position, spawner.rotation);
-            }
+            Spawn();
 
         }
         else if (Random.value < 0.5f && spawnCount >= waveLength * 3)
         {
-            if (Random.value < 0.5f)
-            {
-                Instantiate(turret, spawner.position, spawner.rotation);
-            }
-            else
-            {
-                Instantiate(hunter, spawner.position, spawner.rotation);
-            }
+            Spawn();
 
         }
         else if (Random.value < 0.75f && spawnCount >= waveLength * 4)
         {
-            if (Random.value < 0.5f)
-            {
-                Instantiate(turret, spawner.position, spawner.rotation);
-            }
-            else
-            {
-                Instantiate(hunter, spawner.position, spawner.rotation);
-            }
+            Spawn();
 
         }
         else if (Random.value < 1f && spawnCount >= waveLength * 5)
         {
-            if (Random.value < 0.5f)
-            {
-                Instantiate(turret, spawner.position, spawner.rotation);
-            }
-            else
-            {
-                Instantiate(hunter, spawner.position, spawner.rotation);
-            }
+           
+            Spawn();
+           
 
         }
 
+    }
+    void Spawn()
+    {
+        GameObject obj = pooler.GetPooledObject();
+        if (obj == null) return;
+
+        obj.transform.position = transform.position;
+        obj.transform.rotation = transform.rotation;
+        obj.SetActive(true);
+  
     }
 
 }

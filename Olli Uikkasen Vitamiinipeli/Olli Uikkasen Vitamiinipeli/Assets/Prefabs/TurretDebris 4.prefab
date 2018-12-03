@@ -41,6 +41,7 @@ GameObject:
   - component: {fileID: 50548097430942328}
   - component: {fileID: 61250299704620786}
   - component: {fileID: 114794507716301456}
+  - component: {fileID: 114865526190437142}
   m_Layer: 0
   m_Name: TurretDebris 4
   m_TagString: Debris
@@ -111,7 +112,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.7687132, y: 0.3489529}
-    oldSize: {x: 3.79, y: 2.5}
+    oldSize: {x: 3.7900002, y: 2.5}
     newSize: {x: 1, y: 2}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -163,6 +164,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_TimeOut: 0.8
   m_DetachChildren: 0
+--- !u!114 &114865526190437142
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1776869318090400}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b0a0529f3882ee34bbbb831169226460, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isPlayer: 0
+  shakeAmount: 0.2
 --- !u!212 &212420396931821960
 SpriteRenderer:
   m_ObjectHideFlags: 1
