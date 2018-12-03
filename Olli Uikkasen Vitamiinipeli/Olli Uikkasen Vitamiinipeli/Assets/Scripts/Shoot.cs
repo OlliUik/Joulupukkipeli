@@ -43,7 +43,7 @@ public class Shoot : MonoBehaviour {
   
         if (obj == null) return;
 
-        source.Play();
+        //source.Play();
 
         obj.transform.position = bulletSpawn.position;
         obj.transform.rotation = bulletSpawn.rotation;
