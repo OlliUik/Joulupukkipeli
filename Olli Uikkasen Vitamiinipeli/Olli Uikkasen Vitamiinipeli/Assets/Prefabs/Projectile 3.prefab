@@ -82,7 +82,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 81062f84bbde2c34c89fc3f07d9ac95f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 3
+  speed: 4
   life: 5
   startAngle: 0
   hasDrag: 1
@@ -100,7 +100,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d73fc4dbdd285de49a1c25a876d393e0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lifeSpan: 0
+  lifeSpan: 5
 --- !u!212 &212545849026292730
 SpriteRenderer:
   m_ObjectHideFlags: 1

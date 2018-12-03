@@ -44,9 +44,5 @@ public class StaticPooler : MonoBehaviour {
         return null;
     }
 
-    // Update is called once per frame
-    void Update()
-    {
 
-    }
 }

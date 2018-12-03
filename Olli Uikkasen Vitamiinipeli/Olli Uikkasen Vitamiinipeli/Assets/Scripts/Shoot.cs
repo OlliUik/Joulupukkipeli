@@ -4,12 +4,16 @@ using UnityEngine;
 
 public class Shoot : MonoBehaviour {
     public GameObject bullet;
+    private GameObject pool;
     public float firerate;
     public float shootTimer;
     public Transform bulletSpawn;
+    public Pooler pooler;
 	// Use this for initialization
 	void Start () {
-		shootTimer = 0;
+        pool = GameObject.FindWithTag("ProjectilePool");
+        pooler = pool.GetComponent<Pooler>();
+        shootTimer = 0;
 	}
 	
 	// Update is called once per frame
@@ -23,7 +27,7 @@ public class Shoot : MonoBehaviour {
     void shoot()
     {
         shootTimer = Time.time + firerate;
-        GameObject obj = StaticPooler.current.GetPooledObject();
+        GameObject obj = pooler.GetPooledObject();
   
         if (obj == null) return;
 

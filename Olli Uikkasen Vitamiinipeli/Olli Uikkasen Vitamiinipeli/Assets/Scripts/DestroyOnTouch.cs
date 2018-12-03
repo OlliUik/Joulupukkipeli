@@ -15,7 +15,7 @@ public class DestroyOnTouch : MonoBehaviour {
 	}
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (!Global.gamePaused)
+        if (!Global.gamePaused && collision.gameObject.tag != "Blade")
         {
             collision.gameObject.SetActive(false);
         }
@@ -23,7 +23,7 @@ public class DestroyOnTouch : MonoBehaviour {
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (!Global.gamePaused)
+        if (!Global.gamePaused && collision.gameObject.tag != "Blade")
         {
             collision.gameObject.SetActive(false);
         }

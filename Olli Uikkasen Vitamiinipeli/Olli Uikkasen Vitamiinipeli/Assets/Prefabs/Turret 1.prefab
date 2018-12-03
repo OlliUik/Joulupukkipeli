@@ -660,7 +660,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d73fc4dbdd285de49a1c25a876d393e0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lifeSpan: 0
+  lifeSpan: 20
 --- !u!114 &114431925619345098
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -711,6 +711,7 @@ MonoBehaviour:
   firerate: 1
   shootTimer: 0
   bulletSpawn: {fileID: 4556091459704090}
+  pooler: {fileID: 0}
 --- !u!212 &212056558167732476
 SpriteRenderer:
   m_ObjectHideFlags: 1

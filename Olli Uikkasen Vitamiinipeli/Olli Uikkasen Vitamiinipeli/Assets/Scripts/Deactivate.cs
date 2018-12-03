@@ -8,7 +8,7 @@ public class Deactivate : MonoBehaviour {
     {
         Invoke("Destroy", lifeSpan);
     }
-    private void OnDestroy()
+    private void Destroy()
     {
         gameObject.SetActive(false);
     }

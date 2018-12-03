@@ -26,7 +26,7 @@ public class KillPlayer : MonoBehaviour {
                 Destroy(collision.gameObject);
                 if (bullet)
                 {
-                    Destroy(this.gameObject);
+                    gameObject.SetActive(false);
                 }
 
             }
