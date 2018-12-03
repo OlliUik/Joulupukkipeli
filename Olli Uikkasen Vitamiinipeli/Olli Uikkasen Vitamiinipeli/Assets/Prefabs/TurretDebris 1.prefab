@@ -40,6 +40,7 @@ GameObject:
   - component: {fileID: 114018527359911024}
   - component: {fileID: 50548097430942328}
   - component: {fileID: 61250299704620786}
+  - component: {fileID: 114053822381927424}
   m_Layer: 0
   m_Name: TurretDebris 1
   m_TagString: Debris
@@ -131,13 +132,25 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 20
-  bullet: {fileID: 1776869318090400}
   life: 0.8
   startAngle: 50
   hasDrag: 1
   drag: 0.1
   maxSpeed: 0
   hasMaxSpeed: 0
+--- !u!114 &114053822381927424
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1776869318090400}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 37fac21d1f093d344816942d1abce94e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_TimeOut: 0.8
+  m_DetachChildren: 0
 --- !u!114 &114614631370242016
 MonoBehaviour:
   m_ObjectHideFlags: 1

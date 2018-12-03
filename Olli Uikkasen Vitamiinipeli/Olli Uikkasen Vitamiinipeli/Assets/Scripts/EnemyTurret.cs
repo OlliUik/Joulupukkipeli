@@ -7,7 +7,7 @@ public class EnemyTurret : MonoBehaviour {
 
     public float rotSpeed;
     public float life;
-    public GameObject turret;
+
 
     
     private Vector2 direction;
@@ -17,7 +17,7 @@ public class EnemyTurret : MonoBehaviour {
         target = GameObject.FindWithTag("Player");
 
         
-        Destroy(turret, life);
+
     }
 	
 	// Update is called once per frame

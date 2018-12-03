@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Bullet : MonoBehaviour {
     public float speed;
-    public GameObject bullet;
+
     public float life;
     public float startAngle;
     public bool hasDrag;
@@ -16,7 +16,7 @@ public class Bullet : MonoBehaviour {
 	void Start () {
         
         transform.Rotate(Vector3.forward * startAngle);
-        Destroy(bullet, life);
+
     }
 	
 	// Update is called once per frame

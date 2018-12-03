@@ -298,6 +298,7 @@ GameObject:
   - component: {fileID: 95288522290600220}
   - component: {fileID: 114148630098363522}
   - component: {fileID: 114592981169867752}
+  - component: {fileID: 114705187257404090}
   m_Layer: 0
   m_Name: ButtHugger
   m_TagString: Untagged
@@ -676,7 +677,6 @@ MonoBehaviour:
   target: {fileID: 0}
   rotSpeed: 4
   life: 30
-  turret: {fileID: 1971468819595116}
   move: {fileID: 114148630098363522}
   attacking: 0
   attackSpeed: 13
@@ -698,7 +698,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 10
-  bullet: {fileID: 1971468819595116}
   life: 30
   startAngle: 0
   hasDrag: 0
@@ -734,7 +733,6 @@ MonoBehaviour:
   target: {fileID: 0}
   rotSpeed: 3.7
   life: 30
-  turret: {fileID: 1971468819595116}
 --- !u!114 &114592981169867752
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -762,6 +760,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bullet: 0
+--- !u!114 &114705187257404090
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1971468819595116}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 37fac21d1f093d344816942d1abce94e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_TimeOut: 30
+  m_DetachChildren: 0
 --- !u!212 &212045913874420988
 SpriteRenderer:
   m_ObjectHideFlags: 1

@@ -7,7 +7,7 @@ public class EnemyFlanke : MonoBehaviour {
 
     public float rotSpeed;
     public float life;
-    public GameObject turret;
+  
 
     public Bullet move;
     public bool attacking;
@@ -28,7 +28,7 @@ public class EnemyFlanke : MonoBehaviour {
 
         sprintTimer = Time.time + sprintTime;
         sprintCoolDownTimer = Time.time + sprintTime;
-        Destroy(turret, life);
+      
     }
 
     // Update is called once per frame
