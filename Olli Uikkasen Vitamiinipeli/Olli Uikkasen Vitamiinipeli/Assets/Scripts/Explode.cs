@@ -11,11 +11,17 @@ public class Explode : MonoBehaviour {
     private ScreenShake shake;
     public Camera cam;
     public Quaternion rot;
+    public AudioClip shootSound;
+    public AudioSource source;
     // Use this for initialization
+    void Awake()
+    {
+        source = GetComponent<AudioSource>();
+    }
     void Start () {
         cam = Camera.main;
         shake = cam.GetComponent<ScreenShake>();
-        
+        source.clip = shootSound;
     }
     private void Update()
     {
@@ -25,7 +31,7 @@ public class Explode : MonoBehaviour {
 
 
 
-
+            source.Play();
             Global.score += 1 * Global.multiplier;
             Global.multiplier += 1;
             Global.timer = Time.time + Global.timeLimit;

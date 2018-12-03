@@ -1,6 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+
 using UnityEngine;
+using UnityEngine.Audio;
 
 public class Shoot : MonoBehaviour {
     public GameObject bullet;
@@ -9,16 +11,26 @@ public class Shoot : MonoBehaviour {
     public float shootTimer;
     public Transform bulletSpawn;
     public Pooler pooler;
-	// Use this for initialization
-	void Start () {
+    public AudioClip shootSound;
+    public AudioSource source;
+    private float volLowRange = .5f;
+    private float volHiRange = 1f;
+    // Use this for initialization
+    void Awake()
+    {
+        source = GetComponent<AudioSource>();
+    }
+    void Start () {
         pool = GameObject.FindWithTag("ProjectilePool");
         pooler = pool.GetComponent<Pooler>();
         shootTimer = 0;
-	}
+        source.clip = shootSound;
+    }
 	
 	// Update is called once per frame
 	void Update () {
-	    if(Time.time > shootTimer)
+        
+        if (Time.time > shootTimer)
         {
             shoot();
         }	
@@ -31,8 +43,10 @@ public class Shoot : MonoBehaviour {
   
         if (obj == null) return;
 
-        obj.transform.position = transform.position;
-        obj.transform.rotation = transform.rotation;
+        source.Play();
+
+        obj.transform.position = bulletSpawn.position;
+        obj.transform.rotation = bulletSpawn.rotation;
         obj.SetActive(true);
     }
 }

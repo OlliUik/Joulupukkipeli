@@ -81,7 +81,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6db24f010949ced49967779db87fbfb2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spawnrate: 1.8
+  spawnrate: 1
   spawnTimer: 0
   spawner: {fileID: 4661949943274344}
   waveLength: 5
