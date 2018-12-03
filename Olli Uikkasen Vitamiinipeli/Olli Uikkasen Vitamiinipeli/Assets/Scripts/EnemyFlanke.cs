@@ -94,16 +94,16 @@ public class EnemyFlanke : MonoBehaviour {
         move.speed = regSpeed;
         attacking = false;
     }
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        if (!Global.gamePaused)
-        {
-            if (collision.gameObject.tag == "FlankArea")
-            {
-                attacking = true;
+    //    private void OnTriggerEnter2D(Collider2D collision)
+    //    {
+    //        if (!Global.gamePaused)
+    //        {
+    //            if (collision.gameObject.tag == "FlankArea")
+    //            {
+    //                attacking = true;
 
-            }
-        }
+    //            }
+    //        }
 
-    }
+    //    }
 }

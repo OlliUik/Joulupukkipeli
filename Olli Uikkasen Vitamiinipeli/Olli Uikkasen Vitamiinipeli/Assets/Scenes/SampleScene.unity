@@ -236,7 +236,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.76959854, y: 0.37684694}
-    oldSize: {x: 3.82, y: 2.23}
+    oldSize: {x: 3.8200002, y: 2.23}
     newSize: {x: 3.82, y: 2.23}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -618,11 +618,6 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f1da28f6debc38a418bb2acd69ca3fb2, type: 2}
   m_IsPrefabParent: 0
---- !u!4 &281618206 stripped
-Transform:
-  m_PrefabParentObject: {fileID: 4012556294551796, guid: bbd4958b74d121345a9b39ccd9cc7f9d,
-    type: 2}
-  m_PrefabInternal: {fileID: 827457805}
 --- !u!1 &287278278
 GameObject:
   m_ObjectHideFlags: 0
@@ -697,64 +692,6 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: 
---- !u!1 &370302616
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 5
-  m_Component:
-  - component: {fileID: 370302617}
-  - component: {fileID: 370302618}
-  m_Layer: 0
-  m_Name: FlankArea
-  m_TagString: FlankArea
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &370302617
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 370302616}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.67, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 281618206}
-  m_RootOrder: 10
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!60 &370302618
-PolygonCollider2D:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 370302616}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0, y: 0}
-    oldSize: {x: 0, y: 0}
-    newSize: {x: 0, y: 0}
-    adaptiveTilingThreshold: 0
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  m_Points:
-    m_Paths:
-    - - {x: -6.33869, y: 12.01691}
-      - {x: -9.614908, y: 1.9089723}
-      - {x: -8.021423, y: -10.1586075}
-      - {x: 0.65478945, y: -1.925754}
-      - {x: 0.61603594, y: 2.2298033}
 --- !u!1 &445621184
 GameObject:
   m_ObjectHideFlags: 0
@@ -1488,21 +1425,6 @@ Prefab:
     - target: {fileID: 4012556294551796, guid: bbd4958b74d121345a9b39ccd9cc7f9d, type: 2}
       propertyPath: m_RootOrder
       value: 11
-      objectReference: {fileID: 0}
-    - target: {fileID: 114486221900601344, guid: bbd4958b74d121345a9b39ccd9cc7f9d,
-        type: 2}
-      propertyPath: bounce
-      value: 0.3
-      objectReference: {fileID: 0}
-    - target: {fileID: 114486221900601344, guid: bbd4958b74d121345a9b39ccd9cc7f9d,
-        type: 2}
-      propertyPath: bounceTime
-      value: 0.3
-      objectReference: {fileID: 0}
-    - target: {fileID: 114486221900601344, guid: bbd4958b74d121345a9b39ccd9cc7f9d,
-        type: 2}
-      propertyPath: maxRotSpeed
-      value: 200
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: bbd4958b74d121345a9b39ccd9cc7f9d, type: 2}
@@ -2745,7 +2667,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.7687132, y: 0.3489529}
-    oldSize: {x: 3.79, y: 2.5}
+    oldSize: {x: 3.7900002, y: 2.5}
     newSize: {x: 3.79, y: 2.5}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
