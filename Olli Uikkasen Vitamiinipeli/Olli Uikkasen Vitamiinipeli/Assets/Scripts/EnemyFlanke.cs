@@ -81,7 +81,7 @@ public class EnemyFlanke : MonoBehaviour {
         //sprintCoolDownTimer = Time.time + sprintCoolDown;
         sprintTimer = Time.time + sprintTime;
         Debug.Log("Charge!");
-        move.hasDrag = true;
+
         move.speed = attackSpeed;
         attacking = true;
 
