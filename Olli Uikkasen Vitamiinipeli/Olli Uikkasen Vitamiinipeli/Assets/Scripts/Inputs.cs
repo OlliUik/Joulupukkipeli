@@ -48,6 +48,7 @@ public class Inputs : MonoBehaviour {
             Global.multiplier = 1;
             Global.gameOver = false;
             Global.gameStarted = true;
+            Global.cycles = 0;
         }
 
     }

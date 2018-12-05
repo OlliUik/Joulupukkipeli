@@ -11,5 +11,16 @@ public class Global : MonoBehaviour {
     public static bool gameStarted = false;
     public static bool gamePaused = false;
     public static bool sleep;
+    public static int cycles;
+    private float cycleTimer = 15f;
+    public float cycleLength;
 
+    void Update()
+    {
+
+            
+     }
+
+
+    
 }

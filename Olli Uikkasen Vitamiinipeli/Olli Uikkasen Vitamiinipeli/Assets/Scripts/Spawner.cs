@@ -10,9 +10,20 @@ public class Spawner : MonoBehaviour {
     private int spawnCount;
     public int waveLength;
     public bool reliableSpawner;
+    public int cycle = 1;
+    public int startCycle;
     public Pooler pooler;
-   
-  
+    public List<GameObject> spawnPoints;
+    //public GameObject spawnPoint1;
+    //public GameObject spawnPoint2;
+    //public GameObject spawnPoint3;
+    //public GameObject spawnPoint4;
+    //public GameObject spawnPoint5;
+    //public GameObject spawnPoint6;
+    //public GameObject spawnPoint7;
+    //public GameObject spawnPoint8;
+
+
     // Use this for initialization
     void Start()
     {
@@ -26,67 +37,97 @@ public class Spawner : MonoBehaviour {
         {
             if (Time.time > spawnTimer && !reliableSpawner)
             {
-                shoot();
+                //shoot();
             }
-            else if (Time.time > spawnTimer && reliableSpawner)
+            else if (Time.time > spawnTimer && reliableSpawner && Global.cycles >= startCycle)
             {
-                ReliableSpawn();
+
+                if (spawnCount <= 2)
+                {
+                    ReliableSpawn(2);
+                }
+                else if (spawnCount <= 5)
+                {
+                    ReliableSpawn(3);
+                }
+                else if (spawnCount <= 8)
+                {
+                    Debug.Log("Spawn4");
+                    ReliableSpawn(4);
+                }
+                else {
+                    spawnCount = 0;
+                }
             }
+
         }
 
     }
-    void ReliableSpawn()
+    void ReliableSpawn(int spawns)
     {
-        spawnTimer = Time.time + spawnrate;
-        Debug.Log("Spawner");
-
-        if (Random.value < 0.5f)
-        {
-            Spawn();
-
-        }
-    }
-    void shoot()
-    {
-        spawnTimer = Time.time + spawnrate;
-        Debug.Log("Spawner");
         spawnCount += 1;
-       if(Random.value < 0.33f && spawnCount >= waveLength)
+        int prevRandom = 0;
+        spawnTimer = Time.time + spawnrate;
+        Debug.Log("Spawner");
+        
+        for (int i = 0; i < spawns; i++)
         {
-            Spawn();
-
-        }
-        else if (Random.value < 0.33f && spawnCount >= waveLength *2)
-        {
-            Spawn();
-
-        }
-        else if (Random.value < 0.5f && spawnCount >= waveLength * 3)
-        {
-            Spawn();
-
-        }
-        else if (Random.value < 0.75f && spawnCount >= waveLength * 4)
-        {
-            Spawn();
-
-        }
-        else if (Random.value < 1f && spawnCount >= waveLength * 5)
-        {
-           
-            Spawn();
-           
-
+            int rand = Random.Range(0, 7);
+            if(rand != prevRandom)
+            {
+                Spawn(spawnPoints[rand]);
+            }
+            else
+            {
+                rand = Random.Range(0, 7);
+                Spawn(spawnPoints[rand]);
+            }
+            prevRandom = rand;
         }
 
+        
     }
-    void Spawn()
+    //void shoot()
+    //{
+    //    spawnTimer = Time.time + spawnrate;
+    //    Debug.Log("Spawner");
+    //    spawnCount += 1;
+    //   if(Random.value < 0.33f && spawnCount >= waveLength)
+    //    {
+    //        Spawn();
+
+    //    }
+    //    else if (Random.value < 0.33f && spawnCount >= waveLength *2)
+    //    {
+    //        Spawn();
+
+    //    }
+    //    else if (Random.value < 0.5f && spawnCount >= waveLength * 3)
+    //    {
+    //        Spawn();
+
+    //    }
+    //    else if (Random.value < 0.75f && spawnCount >= waveLength * 4)
+    //    {
+    //        Spawn();
+
+    //    }
+    //    else if (Random.value < 1f && spawnCount >= waveLength * 5)
+    //    {
+           
+    //        Spawn();
+           
+
+    //    }
+
+    //}
+    void Spawn(GameObject sPoint)
     {
         GameObject obj = pooler.GetPooledObject();
         if (obj == null) return;
 
-        obj.transform.position = transform.position;
-        obj.transform.rotation = transform.rotation;
+        obj.transform.position = sPoint.transform.position;
+        obj.transform.rotation = sPoint.transform.rotation;
         obj.SetActive(true);
   
     }

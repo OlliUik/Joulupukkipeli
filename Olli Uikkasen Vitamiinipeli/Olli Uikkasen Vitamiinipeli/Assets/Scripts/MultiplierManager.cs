@@ -11,7 +11,8 @@ public class MultiplierManager : MonoBehaviour {
     public Text gameOverText;
     public Text resetText;
     public Text quitText;
-    
+    public float cycleTimer;
+    public float cycleLength;
 
     // Use this for initialization
     void Start () {
@@ -20,7 +21,7 @@ public class MultiplierManager : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        if (!Global.gamePaused)
+        if (!Global.gamePaused && Global.gameStarted)
         {
             multText.text = "x" + Global.multiplier.ToString();
             scoreText.text = Global.score.ToString();
@@ -38,8 +39,14 @@ public class MultiplierManager : MonoBehaviour {
                 multTimer = Time.time + Global.timeLimit;
                 Global.multiplier = 1;
             }
+            if (Time.time > cycleTimer)
+            {
+                cycleTimer = Time.time + cycleLength;
+                Global.cycles += 1;
+                Debug.Log(Global.cycles +"cycles");
+            }
         }
-           
+  
 
     }
 }
