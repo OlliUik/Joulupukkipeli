@@ -704,7 +704,7 @@ AudioSource:
   m_Enabled: 0
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 63b6578b06499774c82f23ca462c1c90, type: 3}
+  m_audioClip: {fileID: 8300000, guid: d26f60dce2edbe14c93778aab708c833, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 0.53
   m_Pitch: 1
@@ -887,7 +887,7 @@ MonoBehaviour:
   shootTimer: 0
   bulletSpawn: {fileID: 4556091459704090}
   pooler: {fileID: 0}
-  shootSound: {fileID: 8300000, guid: 63b6578b06499774c82f23ca462c1c90, type: 3}
+  shootSound: {fileID: 8300000, guid: d26f60dce2edbe14c93778aab708c833, type: 3}
   source: {fileID: 82692746346954950}
 --- !u!212 &212056558167732476
 SpriteRenderer:
