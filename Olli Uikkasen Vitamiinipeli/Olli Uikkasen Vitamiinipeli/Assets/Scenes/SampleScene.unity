@@ -2627,7 +2627,7 @@ Prefab:
     - target: {fileID: 114729396349908646, guid: 30e41cd2958829742b2f4950a5bfde75,
         type: 2}
       propertyPath: spawnrate
-      value: 1.5
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 30e41cd2958829742b2f4950a5bfde75, type: 2}
@@ -4233,7 +4233,7 @@ Prefab:
     - target: {fileID: 114729396349908646, guid: 30e41cd2958829742b2f4950a5bfde75,
         type: 2}
       propertyPath: spawnrate
-      value: 1.5
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4661949943274344, guid: 30e41cd2958829742b2f4950a5bfde75, type: 2}
       propertyPath: m_LocalScale.x
@@ -6247,7 +6247,7 @@ Prefab:
     - target: {fileID: 114729396349908646, guid: 30e41cd2958829742b2f4950a5bfde75,
         type: 2}
       propertyPath: spawnrate
-      value: 1.5
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4661949943274344, guid: 30e41cd2958829742b2f4950a5bfde75, type: 2}
       propertyPath: m_LocalScale.x
