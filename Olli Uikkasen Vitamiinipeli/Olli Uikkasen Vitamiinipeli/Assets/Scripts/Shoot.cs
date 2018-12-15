@@ -16,15 +16,15 @@ public class Shoot : MonoBehaviour {
     private float volLowRange = .5f;
     private float volHiRange = 1f;
     // Use this for initialization
-    void Awake()
-    {
-        source = GetComponent<AudioSource>();
-    }
+    //void Awake()
+    //{
+    //    source = GetComponent<AudioSource>();
+    //}
     void Start () {
         pool = GameObject.FindWithTag("ProjectilePool");
         pooler = pool.GetComponent<Pooler>();
         shootTimer = 0;
-        source.clip = shootSound;
+        //source.clip = shootSound;
     }
 	
 	// Update is called once per frame
@@ -44,9 +44,11 @@ public class Shoot : MonoBehaviour {
         if (obj == null) return;
 
         //source.Play();
-
+        obj.GetComponent<TrailRenderer>().Clear();
+        obj.GetComponent<TrailRenderer>().enabled = false;
         obj.transform.position = bulletSpawn.position;
         obj.transform.rotation = bulletSpawn.rotation;
         obj.SetActive(true);
+        obj.GetComponent<TrailRenderer>().enabled = true;
     }
 }

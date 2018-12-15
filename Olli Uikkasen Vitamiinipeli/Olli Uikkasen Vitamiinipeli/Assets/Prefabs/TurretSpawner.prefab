@@ -86,7 +86,10 @@ MonoBehaviour:
   spawner: {fileID: 4661949943274344}
   waveLength: 5
   reliableSpawner: 1
+  cycle: 1
+  startCycle: 0
   pooler: {fileID: 114944490477461210}
+  spawnPoints: []
 --- !u!114 &114944490477461210
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -98,6 +101,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9f9b10dfeb35f1f4db1e7a8734831dfa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  poolObject: {fileID: 1165971183378222, guid: 4007bb47ee7f29d438441d32f4d64824, type: 2}
+  poolObject: {fileID: 1165971183378222, guid: 242d847dede8f4642ad009db84e6f426, type: 2}
   poolSize: 20
   canGrow: 1

@@ -125,7 +125,7 @@ public class Spawner : MonoBehaviour {
     {
         GameObject obj = pooler.GetPooledObject();
         if (obj == null) return;
-
+        obj.GetComponent<TrailRenderer>().Clear();
         obj.transform.position = sPoint.transform.position;
         obj.transform.rotation = sPoint.transform.rotation;
         obj.SetActive(true);

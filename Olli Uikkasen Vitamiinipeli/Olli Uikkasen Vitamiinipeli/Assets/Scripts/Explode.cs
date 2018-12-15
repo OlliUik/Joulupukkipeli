@@ -38,7 +38,7 @@ public class Explode : MonoBehaviour {
             Debug.Log(Global.score);
             Instantiate(debris, this.transform.position, rot);
             Instantiate(debris2, this.transform.position, rot);
-            Instantiate(debris3, this.transform.position, this.transform.rotation);
+            Instantiate(debris3, this.transform.position, rot);
 
 
             Debug.Log("Kill!");
